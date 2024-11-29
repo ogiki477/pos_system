@@ -23,7 +23,7 @@
           
           <div class="col-12">
             <label for="yourEmail" class="form-label">Email</label>
-            <input type="email" name="email" class="form-control" id="yourEmail" required>
+            <input type="email" name="email" class="form-control"  value="{{old('name')}}" id="yourEmail" required>
             <div class="invalid-feedback">Please enter a valid Email adddress!</div>
           </div>
         </div>
