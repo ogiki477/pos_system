@@ -13,7 +13,7 @@
                 </li>
 
                 <li class="nav-item menu-open"> 
-                    <a href="{{ url('admin/user/list') }}" class="nav-link @if(Request::segment(2) == 'dashboard')  @else active @endif"> <i class="nav-icon bi bi-speedometer"></i> 
+                    <a href="{{ url('admin/user/list') }}" class="nav-link @if(Request::segment(2) == 'dashboard')  @else active @endif"> <i class="nav-icon bi bi-person"></i> 
                     <p>User</p></a>
                 </li>
                        
