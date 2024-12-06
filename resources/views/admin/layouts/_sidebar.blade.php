@@ -10,6 +10,8 @@
                 <li class="nav-item menu-open"> 
                     <a href="{{ url('admin/dashboard') }}" class="nav-link @if(Request::segment(2) == 'dashboard')  @else active @endif"> <i class="nav-icon bi bi-speedometer"></i> 
                     <p>Dashboard</p></a>
+
+                    
                 </li>
 
                 <li class="nav-item menu-open"> 
