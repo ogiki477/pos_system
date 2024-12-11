@@ -9,20 +9,18 @@
             <ul class="nav sidebar-menu flex-column" data-lte-toggle="treeview" role="menu" data-accordion="false">
                 <li class="nav-item menu-open"> 
                     <a href="{{ url('admin/dashboard') }}" class="nav-link @if(Request::segment(2) == 'dashboard')  @else active @endif"> <i class="nav-icon bi bi-speedometer"></i> 
-                    <p>Dashboard</p></a>
-
-                    
+                    <p>Dashboard</p></a>      
                 </li>
 
                 <li class="nav-item menu-open"> 
                     <a href="{{ url('admin/user/list') }}" class="nav-link @if(Request::segment(2) == 'dashboard')  @else active @endif"> <i class="nav-icon bi bi-person"></i> 
                     <p>User</p></a>
                 </li>
-                       
-                       
+                                  
             </ul> <!--end::Sidebar Menu-->
         </nav>
         @endif
+        
 
 
         @if(Auth::user()->is_role == "2")
