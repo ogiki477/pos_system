@@ -20,6 +20,8 @@
                         <p>
                             Alexander Pierce - Web Developer
                             <small>Member since Nov. 2023</small>
+
+                            
                         </p>
                     </li> <!--end::User Image--> <!--begin::Menu Body-->
                     <li class="user-body"> <!--begin::Row-->
