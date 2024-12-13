@@ -36,7 +36,15 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       // dd($request->all());
+
+       $data = new CategoryModel();
+
+       $data->category_name = trim($request->category_name);
+
+       $data->save();
+
+       return redirect('admin/category/list')->with('success','The Category has been added Successfully');
     }
 
     /**

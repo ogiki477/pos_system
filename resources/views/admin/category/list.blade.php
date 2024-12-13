@@ -31,7 +31,7 @@
                                     
                                     <div class="form-group col-md-3">
                                         <a href=""><button class="btn btn-primary" type="submit" style="margin-top: 25px;">Search</button></a>
-                                        <a href="{{ url('admin/class/list') }}" class="btn btn-success"  style="margin-top: 25px;">Reset</a>
+                                        <a href="{{ url('admin/category/list') }}" class="btn btn-success"  style="margin-top: 25px;">Reset</a>
                                     </div>
 
                                 </div>
@@ -49,6 +49,7 @@
                                     <th>#</th>
                                     <th>Name</th>
                                     <th>Registered Date</th>
+                                    <th>Action</th>
                                     
                                 </tr>
                             </thead>
@@ -57,7 +58,7 @@
 
                                 <tr>
                                 <td>{{$value->id}}</td>
-                                <td>{{$value->name}}</td>
+                                <td>{{$value->category_name}}</td>
                                 
                                 <td>{{ date('d-m-Y H:i A', strtotime($value->created_at)) }}</td>
 
