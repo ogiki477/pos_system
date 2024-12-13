@@ -58,14 +58,7 @@
                                 <tr>
                                 <td>{{$value->id}}</td>
                                 <td>{{$value->name}}</td>
-                                <td>
-                                    @if($value->status == 0)
-                                        <button class="btn btn-success">Active</button>
-                                    @else 
-                                        <button class="btn btn-danger">Inactive</button>
-                                    @endif
-                                </td>
-                                <td>{{$value->created_by_name}}</td>
+                                
                                 <td>{{ date('d-m-Y H:i A', strtotime($value->created_at)) }}</td>
 
                                 <td>

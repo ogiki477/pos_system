@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\CategoryModel;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
@@ -12,6 +13,7 @@ class CategoryController extends Controller
     public function index()
     {
         //dd("Yooo");
+        $data['getRecord'] = CategoryModel::getCategory();
         $data['meta_title'] = 'category_list';
         return view('admin.category.list',$data);    
     
@@ -22,7 +24,11 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        //
+       // dd("YOOO");
+
+       $data['meta_title'] = 'create_category';
+
+       return view('admin.category.add',$data);
     }
 
     /**
