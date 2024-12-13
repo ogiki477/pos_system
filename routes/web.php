@@ -22,6 +22,8 @@ Route::group(['middleware'=>'admin'],function(){
     Route::get('admin/category/list',[CategoryController::class,'index']);
     Route::get('admin/category/add',[CategoryController::class,'create']);
     Route::post('admin/category/add',[CategoryController::class,'store']);
+    Route::get('admin/category/edit/{id}',[CategoryController::class,'edit']);
+    Route::post('admin/category/edit/{id}',[CategoryController::class,'update']);
     
 });
 

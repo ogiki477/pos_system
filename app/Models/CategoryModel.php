@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Request;
 
 class CategoryModel extends Model
 {
@@ -10,9 +11,14 @@ class CategoryModel extends Model
 
     static public  function getCategory(){
 
-        $data = self::select('category.*')
-                      ->orderBy('category.category_name','asc')
-                      ->paginate(2);
+        $data = self::select('category.*');
+                        if(!empty(Request::get('category_name'))){
+
+                            $data = $data->where('category.category_name','like','%'.Request::get('category_name').'%');
+                                        
+                        }
+                      $data = $data->orderBy('category.category_name','desc')
+                              ->paginate(1);
         return $data;
     }
 }

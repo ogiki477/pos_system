@@ -26,7 +26,7 @@
                                 <div class="row">
                                     <div class="form-group col-md-3">
                                       <label>Category Name</label>
-                                      <input type="text" class="form-control" value="{{Request::get('name')}}" name="name" placeholder="search by class name">
+                                      <input type="text" class="form-control" value="{{Request::get('category_name')}}" name="category_name" placeholder="search by category name">
                                     </div>
                                     
                                     <div class="form-group col-md-3">

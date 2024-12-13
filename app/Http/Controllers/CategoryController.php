@@ -60,7 +60,13 @@ class CategoryController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $data['getRecord'] = CategoryModel::find($id);
+
+        $data['meta_title'] = 'edit_category';
+
+        return view('admin/category/edit',$data);
+
+        
     }
 
     /**
@@ -68,7 +74,15 @@ class CategoryController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        //dd("Yooo");
+
+        $data = CategoryModel::find($id);
+
+        $data->category_name = trim($request->category_name);
+
+        $data->save();
+
+        return redirect('admin/category/list')->with('success',"The Category has been Updated Successfully");
     }
 
     /**
