@@ -11,7 +11,10 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        //
+        //dd("Yooo");
+        $data['meta_title'] = 'category_list';
+        return view('admin.category.list',$data);    
+    
     }
 
     /**
