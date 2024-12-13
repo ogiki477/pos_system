@@ -18,7 +18,7 @@ class CategoryModel extends Model
                                         
                         }
                       $data = $data->orderBy('category.category_name','desc')
-                              ->paginate(1);
+                              ->paginate(2);
         return $data;
     }
 }

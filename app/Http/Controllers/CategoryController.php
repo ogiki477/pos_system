@@ -90,6 +90,10 @@ class CategoryController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $data = CategoryModel::find($id);
+
+        $data->delete();
+
+        return redirect()->back()->with('error','Category Deleted');
     }
 }
