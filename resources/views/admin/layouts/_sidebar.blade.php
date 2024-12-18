@@ -54,8 +54,7 @@
                 <li class="nav-item"> 
                     <a href="{{ url('admin/expenses/list') }}" class="nav-link @if(Request::segment(2) == 'expenses')  @else active @endif"> 
                         <i class="nav-icon fas fa-money-bill"></i>
-
-                        <p>Expenses</p>
+                    <p>Expenses</p>
                     </a>
                 </li>
 
